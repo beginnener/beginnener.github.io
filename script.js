@@ -13,31 +13,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectsData = {
         1: {
             title: "E-Commerce Website",
-            description: "A comprehensive e-commerce platform built with modern web technologies. Features include user authentication, shopping cart functionality, payment gateway integration, product search and filtering, order management, and responsive design. The backend is powered by Laravel with a MySQL database, while the frontend uses vanilla JavaScript for interactive elements.",
+            description: "A comprehensive e-commerce platform built with modern web technologies. Features include user authentication, shopping cart functionality, filtering, order management, and responsive design. The backend is powered by Laravel with a MySQL database, while the frontend uses Bootstrap and vanilla JavaScript for interactive elements.",
             tech: ["HTML", "CSS", "JavaScript", "Laravel", "MySQL", "Bootstrap"],
-            liveLink: "#",
-            githubLink: "#"
+            liveLink: "https://youtu.be/Ylwmm8No-tg",
+            githubLink: "https://github.com/beginnener/campgo"
         },
         2: {
-            title: "Task Management App",
-            description: "A productivity-focused task management application with an intuitive drag-and-drop interface. Users can create, organize, and track tasks across different categories. Features include progress tracking, deadline notifications, team collaboration, and data synchronization across devices using Firebase backend services.",
-            tech: ["Vue.js", "Tailwind CSS", "Firebase", "Vuex", "Chart.js"],
-            liveLink: "#",
-            githubLink: "#"
+            title: "UI Relayout - STIE Ekuitas",
+            description: "A UI relayout project for STIE Ekuitas, focusing on enhancing user experience and visual appeal. The project involved redesigning the website layout, improving navigation, and ensuring responsiveness across devices. It utilizes Wordpress for content management and includes custom CSS for styling. Note: This project is currently private and not available on GitHub.",
+            tech: ["Wordpress", "CSS"],
+            liveLink: "",
+            githubLink: ""
         },
         3: {
             title: "Portfolio Website",
             description: "A personal portfolio website showcasing web development projects and skills. Built with modern design principles, featuring smooth animations, responsive layout, and optimized performance. Includes sections for about, skills, projects, and contact information with form validation and email integration.",
-            tech: ["HTML", "CSS", "JavaScript", "GSAP", "EmailJS", "AOS"],
-            liveLink: "#",
-            githubLink: "#"
+            tech: ["HTML", "CSS", "JavaScript", "GSAP"],
+            liveLink: "",
+            githubLink: "https://github.com/beginnener/beginnener.github.io"
         },
         4: {
-            title: "Weather Dashboard",
-            description: "A comprehensive weather application providing real-time weather information and forecasts. Features include current weather conditions, 7-day forecast, location-based weather, weather maps, and weather alerts. Built with React and integrated with multiple weather APIs for accurate data.",
-            tech: ["React", "CSS Modules", "Weather API", "Axios", "React Router"],
-            liveLink: "#",
-            githubLink: "#"
+            title: "Main Riang - School Website",
+            description: "A school website for Main Riang Preschool, designed to provide information about the institution, it's programs, and events. The site features a clean layout, easy navigation for user. Note: This project is currently private and not available on GitHub.",
+            tech: ["Laravel", "Tailwind CSS", "JavaScript", "Alpine JS"],
+            liveLink: "",
+            githubLink: ""
         }
     };
 
@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Set links
             modalLiveLink.href = project.liveLink;
             modalGithubLink.href = project.githubLink;
+
+            // Show links only if they are available
+            modalLiveLink.style.display = project.liveLink ? 'inline-block' : 'none';
+            modalGithubLink.style.display = project.githubLink ? 'inline-block' : 'none';
             
             // Show modal
             projectModal.classList.add('active');
@@ -140,3 +144,165 @@ window.addEventListener('scroll', function() {
     });
 });
 
+// Hamburger Menu Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    // Toggle mobile menu
+    menuIcon.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+        
+        // Change hamburger icon
+        if (navbar.classList.contains('active')) {
+            menuIcon.classList.remove('bx-menu');
+            menuIcon.classList.add('bx-x');
+        } else {
+            menuIcon.classList.remove('bx-x');
+            menuIcon.classList.add('bx-menu');
+        }
+    });
+
+    // Close mobile menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navbar.classList.remove('active');
+            menuIcon.classList.remove('bx-x');
+            menuIcon.classList.add('bx-menu');
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
+            navbar.classList.remove('active');
+            menuIcon.classList.remove('bx-x');
+            menuIcon.classList.add('bx-menu');
+        }
+    });
+
+    // Close mobile menu on window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            navbar.classList.remove('active');
+            menuIcon.classList.remove('bx-x');
+            menuIcon.classList.add('bx-menu');
+        }
+    });
+});
+
+// Create particle effect
+const particlesContainer = document.getElementById('particles-container');
+const particleCount = 80;
+
+// Create particles
+for (let i = 0; i < particleCount; i++) {
+    createParticle();
+}
+
+function createParticle() {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    
+    // Random size (small)
+    const size = Math.random() * 3 + 1;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    
+    // Initial position
+    resetParticle(particle);
+    
+    particlesContainer.appendChild(particle);
+    
+    // Animate
+    animateParticle(particle);
+}
+
+function resetParticle(particle) {
+    // Random position
+    const posX = Math.random() * 100;
+    const posY = Math.random() * 100;
+    
+    particle.style.left = `${posX}%`;
+    particle.style.top = `${posY}%`;
+    particle.style.opacity = '0';
+    
+    return {
+        x: posX,
+        y: posY
+    };
+}
+
+function animateParticle(particle) {
+    // Initial position
+    const pos = resetParticle(particle);
+    
+    // Random animation properties
+    const duration = Math.random() * 10 + 10;
+    const delay = Math.random() * 5;
+    
+    // Animate with GSAP-like timing
+    setTimeout(() => {
+        particle.style.transition = `all ${duration}s linear`;
+        particle.style.opacity = Math.random() * 0.3 + 0.1;
+        
+        // Move in a slight direction
+        const moveX = pos.x + (Math.random() * 20 - 10);
+        const moveY = pos.y - Math.random() * 30; // Move upwards
+        
+        particle.style.left = `${moveX}%`;
+        particle.style.top = `${moveY}%`;
+        
+        // Reset after animation completes
+        setTimeout(() => {
+            animateParticle(particle);
+        }, duration * 1000);
+    }, delay * 1000);
+}
+
+// Mouse interaction
+document.addEventListener('mousemove', (e) => {
+    // Create particles at mouse position
+    const mouseX = (e.clientX / window.innerWidth) * 100;
+    const mouseY = (e.clientY / window.innerHeight) * 100;
+    
+    // Create temporary particle
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    
+    // Small size
+    const size = Math.random() * 4 + 2;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    
+    // Position at mouse
+    particle.style.left = `${mouseX}%`;
+    particle.style.top = `${mouseY}%`;
+    particle.style.opacity = '0.6';
+    
+    particlesContainer.appendChild(particle);
+    
+    // Animate outward
+    setTimeout(() => {
+        particle.style.transition = 'all 2s ease-out';
+        particle.style.left = `${mouseX + (Math.random() * 10 - 5)}%`;
+        particle.style.top = `${mouseY + (Math.random() * 10 - 5)}%`;
+        particle.style.opacity = '0';
+        
+        // Remove after animation
+        setTimeout(() => {
+            particle.remove();
+        }, 2000);
+    }, 10);
+    
+    // Subtle movement of gradient spheres
+    const spheres = document.querySelectorAll('.gradient-sphere');
+    const moveX = (e.clientX / window.innerWidth - 0.5) * 5;
+    const moveY = (e.clientY / window.innerHeight - 0.5) * 5;
+    
+    spheres.forEach(sphere => {
+        const currentTransform = getComputedStyle(sphere).transform;
+        sphere.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+});

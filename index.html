@@ -16,6 +16,17 @@
 </head>
 </head>
 <body>
+    <!-- animated bg -->
+     <div class="gradient-background">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+        <div class="glow"></div>
+        <div class="grid-overlay"></div>
+        <div class="noise-overlay"></div>
+        <div class="particles-container" id="particles-container"></div>
+    </div>
+
     <!-- navbar -->
     <header class="header">
         <i class="bx bx-menu" id="menu-icon"></i> 
@@ -28,12 +39,6 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-
-    <!-- lower navbar button -->
-    <!-- <div class="lower-navbar">
-        <a href="#"><i class="fa fa-github"></i></a>
-        <a href="#"><i class="fa fa-linkedin-square"></i></a>
-    </div> -->
 
     <!-- home section -->
     <section class="home" id="home">
@@ -118,6 +123,7 @@
                         <h3>E-Commerce Website</h3>
                         <p>A modern and responsive e-commerce platform with cart functionality, user authentication, and payment integration.</p>
                         <div class="tech-stack">
+                            <span>Bootstrap</span>
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
@@ -129,12 +135,11 @@
                 
                 <div class="project-card" id="card-2">
                     <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A productivity app for managing daily tasks with drag-and-drop functionality and progress tracking.</p>
+                        <h3>UI Relayout - STIE Ekuitas</h3>
+                        <p>A UI relayout project for STIE Ekuitas, focusing on enhancing user experience and visual appeal. The project involved redesigning the website layout, improving navigation, and ensuring responsiveness across devices. It utilizes Wordpress for content management and includes custom CSS for styling. Note: This project is currently private and not available on GitHub.</p>
                         <div class="tech-stack">
-                            <span>Vue.js</span>
-                            <span>Tailwind CSS</span>
-                            <span>Firebase</span>
+                            <span>Wordpress</span>
+                            <span>CSS</span>
                         </div>
                         <button class="btn view-project" data-project="2">View Project</button>
                     </div>
@@ -142,7 +147,7 @@
                 
                 <div class="project-card" id="card-3">
                     <div class="project-content">
-                        <h3>Portfolio Website</h3>
+                        <h3>This Portfolio Website</h3>
                         <p>A personal portfolio showcasing web development skills with modern design and smooth animations.</p>
                         <div class="tech-stack">
                             <span>HTML</span>
@@ -156,12 +161,13 @@
                 
                 <div class="project-card" id="card-4">
                     <div class="project-content">
-                        <h3>Weather Dashboard</h3>
-                        <p>A weather application with real-time data, location search, and 7-day forecast functionality.</p>
+                        <h3>Main Riang - School Website</h3>
+                        <p>A school website for Main Riang Preschool, designed to provide information about the institution, it's programs, and events. The site features a clean layout, easy navigation for user. Note: This project is currently private and not available on GitHub.</p>
                         <div class="tech-stack">
-                            <span>React</span>
-                            <span>CSS Modules</span>
-                            <span>Weather API</span>
+                            <span>Laravel</span>
+                            <span>Tailwind CSS</span>
+                            <span>JavaScript</span>
+                            <span>Alpine.js</span>
                         </div>
                         <button class="btn view-project" data-project="4">View Project</button>
                     </div>
@@ -190,7 +196,32 @@
 
     <!-- contact section -->
     <section class="contact" id="contact">
-
+        <div class="contact-content">
+            <h2>Let's Connect</h2>
+            <p>Feel free to reach out to me on these platforms. I'm always open to discussing new opportunities, projects, or just having a chat about web development!</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/natasha-adinda-cantika-390439280" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-linkedin-square social-icon" style="font-size: 32px;"></i>
+                    <div class="social-text">
+                        <h3>LinkedIn</h3>
+                        <p>Professional Network</p>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/beginnener" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-github social-icon" style="font-size: 32px;"></i>
+                    <div class="social-text">
+                        <h3>GitHub</h3>
+                        <p>Code Repository</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="contact-footer">
+                <p>© 2025 Natasha's Portfolio. Built with passion and creativity.</p>
+            </div>
+        </div>
     </section>
 
     <script src="script.js"></script>
