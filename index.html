@@ -18,8 +18,6 @@
 <body>
     <!-- navbar -->
     <header class="header">
-        <a href="#" class="logo">Nematoda</a>
-
         <i class="bx bx-menu" id="menu-icon"></i> 
 
         <nav class="navbar">
@@ -32,15 +30,15 @@
     </header>
 
     <!-- lower navbar button -->
-    <div class="lower-navbar">
+    <!-- <div class="lower-navbar">
         <a href="#"><i class="fa fa-github"></i></a>
         <a href="#"><i class="fa fa-linkedin-square"></i></a>
-    </div>
+    </div> -->
 
     <!-- home section -->
     <section class="home" id="home">
         <div class="home-content">
-            <h1>PORTFOLIO</h1>
+            <h1>NATASHA'S PORTFOLIO</h1>
             <div class="text-animate">
                 <h6>Frontend Developer & UIUX Designer</h6>
             </div>
@@ -62,7 +60,8 @@
                 I love creating beautiful and functional web applications that provide 
                 an exceptional user experience. With a keen eye for design and a strong 
                 understanding of frontend technologies, I strive to bring ideas to life 
-                through code. Let's collaborate and build something amazing together! 
+                through code. Right now, i'am a 5th semester student majoring in computer science.
+                Let's collaborate and build something amazing together! 
             </p>
         </div>
     </div>
@@ -70,24 +69,124 @@
 
     <!-- skills section -->
     <section class="skills" id="skills">
-
+        <div class="skills-content">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>HTML <span>80%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="skill">
+                    <h3>CSS <span>80%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="skill">
+                    <h3>Vanilla JS <span>60%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="skill">
+                    <h3>Tailwind CSS <span>75%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="skill">
+                    <h3>Alpine JS <span>50%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="skill">
+                    <h3>Laravel <span>80%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="skill">
+                    <h3>Git <span>80%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="skill">
+                    <h3>Figma <span>90%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- projects section -->
     <section class="projects" id="projects">
-        <div class="project-card" id="card-1">
-
-        </div>
-        <div class="project-card" id="card-2">
-        
-        </div>
-        <div class="project-card" id="card-3">
-        
-        </div>
-        <div class="project-card" id="card-4">
-        
+        <div class="projects-content">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card" id="card-1">
+                    <div class="project-content">
+                        <h3>E-Commerce Website</h3>
+                        <p>A modern and responsive e-commerce platform with cart functionality, user authentication, and payment integration.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Laravel</span>
+                        </div>
+                        <button class="btn view-project" data-project="1">View Project</button>
+                    </div>
+                </div>
+                
+                <div class="project-card" id="card-2">
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>A productivity app for managing daily tasks with drag-and-drop functionality and progress tracking.</p>
+                        <div class="tech-stack">
+                            <span>Vue.js</span>
+                            <span>Tailwind CSS</span>
+                            <span>Firebase</span>
+                        </div>
+                        <button class="btn view-project" data-project="2">View Project</button>
+                    </div>
+                </div>
+                
+                <div class="project-card" id="card-3">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio showcasing web development skills with modern design and smooth animations.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>GSAP</span>
+                        </div>
+                        <button class="btn view-project" data-project="3">View Project</button>
+                    </div>
+                </div>
+                
+                <div class="project-card" id="card-4">
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>A weather application with real-time data, location search, and 7-day forecast functionality.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>CSS Modules</span>
+                            <span>Weather API</span>
+                        </div>
+                        <button class="btn view-project" data-project="4">View Project</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h3 id="modalTitle">Project Title</h3>
+            <p class="modal-description" id="modalDescription">
+                Project description goes here...
+            </p>
+            <div class="modal-tech" id="modalTech">
+                <!-- Tech stack will be inserted here -->
+            </div>
+            <div class="modal-links">
+                <a href="#" class="btn" id="modalLiveLink">Live Demo</a>
+                <a href="#" class="btn" id="modalGithubLink">GitHub</a>
+            </div>
+        </div>
+    </div>
 
     <!-- contact section -->
     <section class="contact" id="contact">
