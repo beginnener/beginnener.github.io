@@ -1,1 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #081b29;
+    --second-bg-color:rgb(5, 20, 30);
+    --text-color: #ededed;
+    --primary-color: #00abf0;
+    --gradient-color: linear-gradient(90deg, #00abf0 0%, #ededed 100%);
+    --gradient-text: linear-gradient(90deg, #00abf0 0%, #ededed 100%);
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.navbar{
+    display: flex;
+    gap: 6rem;
+    font-size: 1.6rem;
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navbar a:hover, .navbar a.active{
+    color: var(--primary-color);
+}
+
+.lower-navbar {
+    position: fixed;
+    bottom: 3.6rem;
+    padding: 0 9%;
+}
+
+.lower-navbar a {
+    color: var(--text-color);
+    font-size: 3rem;
+    margin-right: 2rem;
+    transition: color .3s;
+}
+
+.lower-navbar a:hover {
+    color: var(--primary-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+}
+
+.home-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.home-content .text-animate {
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.home-content .text-animate h6{
+    font-size: 3.2rem;
+    font-weight: 700;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.home-content p i {
+    font-style: italic;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    gap: 4rem;
+}
+
+.about-content {
+    background: var(--text-color);
+    border-radius: 2rem ;
+    max-width: 100%;
+    padding: 4rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h3 {
+    color: var(--bg-color);
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.about-img img{ 
+    margin-top: -2rem;
+    width: 300px;
+    height: auto;
+}
